@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import "./Navigation.css"
 import sound from '../../sound/ha_ha_ha.mp3';
+import "./Navigation.css"
 
 const Navigation = () => {
 

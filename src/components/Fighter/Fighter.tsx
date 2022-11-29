@@ -1,13 +1,12 @@
 import React, {MouseEventHandler} from 'react';
 import {FightersUser} from "../../types";
-import "../../containers/AddPlayer/AddPlayer.css"
 import sound1 from '../../sound/scorpion.mp3';
 import sound2 from '../../sound/zero.mp3';
 import sound3 from '../../sound/raiden.mp3';
 import sound4 from '../../sound/kitana.mp3';
 import sound5 from '../../sound/mileena.mp3';
 import sound6 from '../../sound/sonya.mp3';
-
+import "../../containers/AddPlayer/AddPlayer.css";
 
 interface Props {
   fighter: FightersUser;

@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {FightersUser} from "../../types";
 import {NavLink} from "react-router-dom";
-import "./Winner.css"
 import Fighter from "../../components/Fighter/Fighter";
 import sound from '../../sound/Fatality.mp3';
+import "./Winner.css"
 
 interface Props {
   fighter: FightersUser;

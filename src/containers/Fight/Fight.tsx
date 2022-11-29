@@ -1,6 +1,6 @@
 import React from 'react';
-import "./Fight.css";
 import {NavLink, Outlet} from "react-router-dom";
+import "./Fight.css";
 
 const Fight = () => {
 

@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import "./AppMortalCombat.css";
-import Navigation from "../../components/Navigation/Navigation";
 import {Route, Routes} from "react-router-dom";
+import {FightersUser} from "../../types";
+import Navigation from "../../components/Navigation/Navigation";
 import AddPlayer from "../AddPlayer/AddPlayer";
 import AddRival from "../AddRival/AddRival";
-import {FightersUser} from "../../types";
 import UserVSComputer from "../../components/UserVSComputer/UserVSComputer";
 import Fight from "../Fight/Fight";
 import Winner from "../Winner/Winner";
+import "./AppMortalCombat.css";
 
 const AppMortalCombat = () => {
   const fightersUser: FightersUser[] = [{
