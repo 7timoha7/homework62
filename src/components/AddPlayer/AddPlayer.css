@@ -1,0 +1,29 @@
+.item {
+    width: 200px;
+    height: 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    background: rgba(255, 0, 0, 0.49);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.imgFighter {
+    /*width: inherit;*/
+    border-radius: 25px;
+    max-width: 180px;
+    max-height: 100px;
+}
+
+.AddPlayerBox{
+    background: rgba(128, 128, 128, 0.56);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
