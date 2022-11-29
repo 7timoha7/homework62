@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {FightersUser} from "../../types";
 import {NavLink} from "react-router-dom";
 import "./Winner.css"
 import Fighter from "../AddPlayer/Fighter";
+import sound from '../../sound/Fatality.mp3';
 
 
 interface Props {
@@ -32,9 +33,13 @@ const Winner: React.FC<Props> = ({fighter, fighterComputer}) => {
       </div>
     }
   }
+  const music = () => new Audio(sound).play();
 
-
-
+  useEffect(() => {
+    if (fighter.id && fighterComputer.id) {
+      music()
+    }
+  }, [fighter.id, fighterComputer.id])
 
   return (
     <div className="winnerPlayer">
