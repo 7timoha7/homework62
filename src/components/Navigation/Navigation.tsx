@@ -3,8 +3,8 @@ import {NavLink} from "react-router-dom";
 import "./Navigation.css"
 import sound from '../../sound/ha_ha_ha.mp3';
 
-
 const Navigation = () => {
+
   const music = () => new Audio(sound).play();
 
   return (

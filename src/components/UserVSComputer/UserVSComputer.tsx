@@ -1,6 +1,6 @@
 import React from 'react';
 import {FightersUser} from "../../types";
-import Fighter from "../AddPlayer/Fighter";
+import Fighter from "../Fighter/Fighter";
 import "./UserVsComputer.css";
 
 interface Props {
@@ -8,13 +8,12 @@ interface Props {
   fighterComp: FightersUser;
 }
 
-
 const UserVsComputer: React.FC<Props> = ({fighter, fighterComp}) => {
-  const noPlayer = (fighter:FightersUser)=>{
+  const noPlayer = (fighter: FightersUser) => {
     if (fighter.id) {
       return <Fighter fighter={fighter}/>
     } else {
-      return(
+      return (
         <div className="item">
           <p style={{fontSize: "70px"}}>?</p>
         </div>
@@ -32,7 +31,7 @@ const UserVsComputer: React.FC<Props> = ({fighter, fighterComp}) => {
           <div>
             <h3 className="vs">VS</h3>
           </div>
-          <div>
+          <div className="vs-box">
             <h2>Computer</h2>
             {noPlayer(fighterComp)}
           </div>

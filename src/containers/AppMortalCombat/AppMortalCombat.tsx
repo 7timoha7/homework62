@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import "./AppMortalCombat.css";
 import Navigation from "../../components/Navigation/Navigation";
 import {Route, Routes} from "react-router-dom";
-import AddPlayer from "../../components/AddPlayer/AddPlayer";
-import AddRival from "../../components/AddRival/AddRival";
+import AddPlayer from "../AddPlayer/AddPlayer";
+import AddRival from "../AddRival/AddRival";
 import {FightersUser} from "../../types";
 import UserVSComputer from "../../components/UserVSComputer/UserVSComputer";
-import Fight from "../../components/Fight/Fight";
-import Winner from "../../components/Winner/Winner";
+import Fight from "../Fight/Fight";
+import Winner from "../Winner/Winner";
 
 const AppMortalCombat = () => {
   const fightersUser: FightersUser[] = [{
@@ -61,7 +61,7 @@ const AppMortalCombat = () => {
   }
 
   const AddFighterComputer = (user: FightersUser) => {
-    setAddComputer(user)
+    setAddComputer(user);
   }
 
   return (
@@ -81,6 +81,9 @@ const AppMortalCombat = () => {
         </Route>
         <Route path={"/AddRival"} element={(
           <AddRival fighterComp={fightersComputer} onClick={AddFighterComputer}/>
+        )}/>
+        <Route path="*" element={(
+          <h1 style={{color: "white"}}>Not found</h1>
         )}/>
       </Routes>
     </div>

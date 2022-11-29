@@ -1,12 +1,10 @@
 import React from 'react';
-import Fighter from "../AddPlayer/Fighter";
+import Fighter from "../../components/Fighter/Fighter";
 import {FightersUser} from "../../types";
-
 
 interface Props {
   fighterComp: FightersUser[];
   onClick: (user: FightersUser) => void;
-
 }
 
 const AddRival: React.FC<Props> = ({fighterComp, onClick}) => {

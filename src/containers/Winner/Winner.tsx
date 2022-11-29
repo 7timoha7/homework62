@@ -2,9 +2,8 @@ import React, {useEffect} from 'react';
 import {FightersUser} from "../../types";
 import {NavLink} from "react-router-dom";
 import "./Winner.css"
-import Fighter from "../AddPlayer/Fighter";
+import Fighter from "../../components/Fighter/Fighter";
 import sound from '../../sound/Fatality.mp3';
-
 
 interface Props {
   fighter: FightersUser;
@@ -13,7 +12,7 @@ interface Props {
 
 const Winner: React.FC<Props> = ({fighter, fighterComputer}) => {
   const getRandom = () => {
-    return Math.floor(Math.random() * (2 - 1 + 1)) + 1
+    return Math.floor(Math.random() * (2 - 1 + 1)) + 1;
   }
 
   const getWinner = (getRandom: number) => {
@@ -39,7 +38,7 @@ const Winner: React.FC<Props> = ({fighter, fighterComputer}) => {
     if (fighter.id && fighterComputer.id) {
       music()
     }
-  }, [fighter.id, fighterComputer.id])
+  }, [fighter.id, fighterComputer.id]);
 
   return (
     <div className="winnerPlayer">

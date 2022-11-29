@@ -1,14 +1,12 @@
 import React, {MouseEventHandler} from 'react';
 import {FightersUser} from "../../types";
-import "./AddPlayer.css"
+import "../../containers/AddPlayer/AddPlayer.css"
 import sound1 from '../../sound/scorpion.mp3';
 import sound2 from '../../sound/zero.mp3';
 import sound3 from '../../sound/raiden.mp3';
 import sound4 from '../../sound/kitana.mp3';
 import sound5 from '../../sound/mileena.mp3';
 import sound6 from '../../sound/sonya.mp3';
-
-
 
 
 interface Props {
@@ -32,6 +30,7 @@ const Fighter: React.FC<Props> = ({fighter, onClick}) => {
       new Audio(sound6).play();
     }
   }
+
   return (
     <div onClick={() => music(fighter.id)}>
       <div className="item" onClick={onClick}>
@@ -39,7 +38,6 @@ const Fighter: React.FC<Props> = ({fighter, onClick}) => {
         <img className="imgFighter" src={fighter.image} alt={fighter.fighter}/>
       </div>
     </div>
-
   );
 };
 
